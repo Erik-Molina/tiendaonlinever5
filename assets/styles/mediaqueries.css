@@ -1,0 +1,1167 @@
+/* ============= -------------------------------------------INICIO + SLIDER------------------------------------- ============= */
+/* Extra pequeño (< 360px) - Móviles muy pequeños (ej. iPhone 4, Galaxy S5 en modo compacto) */
+@media (max-width: 359.98px) {
+    .hero-slider {
+        height: calc(100vh - 50px);
+    }
+
+    .slide {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .slide-content {
+        padding: 0 10px;
+        align-items: center;
+    }
+
+    .slide-content h1,
+    .slide-content p {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .slide-content h1 {
+        font-size: 20px;
+    }
+
+    .slide-content p {
+        font-size: 12px;
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+
+    .slider-btn {
+        font-size: 16px;
+        padding: 6px;
+    }
+
+    .prev-btn {
+        left: 5px;
+    }
+
+    .next-btn {
+        right: 5px;
+    }
+
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Pequeño (360px - 575px) - Móviles pequeños (ej. iPhone SE, Galaxy S9) */
+@media (min-width: 360px) and (max-width: 575.98px) {
+    .hero-slider {
+        height: calc(100vh - 50px);
+    }
+
+    .slide {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .slide-content {
+        padding: 0 15px;
+        align-items: center;
+    }
+
+    .slide-content h1,
+    .slide-content p {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .slide-content h1 {
+        font-size: 24px;
+    }
+
+    .slide-content p {
+        font-size: 14px;
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+        gap: 12px;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .slider-btn {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+}
+
+/* Pequeño a mediano (576px - 767px)  */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero-slider {
+        height: calc(100vh - 50px);
+    }
+
+    .slide {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .slide-content {
+        padding: 0 20px;
+        align-items: center;
+    }
+
+    .slide-content h1,
+    .slide-content p {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .slide-content h1 {
+        font-size: 32px;
+    }
+
+    .slide-content p {
+        font-size: 16px;
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+        gap: 15px;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+
+    .slider-btn {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .prev-btn {
+        left: 15px;
+    }
+
+    .next-btn {
+        right: 15px;
+    }
+}
+
+/* Mediano (768px - 991px) - Tablets (ej. iPad Air, iPad Pro 10.5" en vertical) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-slider {
+        height: calc(100vh - 50px);
+    }
+
+    .slide {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .slide-content {
+        padding: 0 30px;
+        align-items: flex-start; /* Vuelve a la izquierda como en pantallas grandes */
+    }
+
+    .slide-content h1,
+    .slide-content p {
+        max-width: 60%;
+        text-align: left;
+    }
+
+    .slide-content h1 {
+        font-size: 40px;
+    }
+
+    .slide-content p {
+        font-size: 16px;
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: auto;
+        margin-top: 25px;
+        gap: 15px;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+
+    .slider-btn {
+        font-size: 22px;
+        padding: 12px;
+    }
+
+    .prev-btn {
+        left: 20px;
+    }
+
+    .next-btn {
+        right: 20px;
+    }
+}
+
+/* === Barra de búsqueda === */
+/* Celulares pequeños (< 360px) */
+@media (max-width: 359.98px) {
+    .search-overlay {
+        position: absolute;
+        top: 70px; /* margin-top: 15px + button height (~20px) + 35px */
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .search-wrapper {
+        width: 90%;
+        max-width: none;
+        padding: 0 5px;
+    }
+
+    .search-box {
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+    }
+
+    #product-search {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    #product-search::placeholder {
+        font-size: 14px;
+    }
+
+    .search-btn {
+        padding: 0 15px;
+    }
+
+    .search-btn i {
+        font-size: 16px;
+    }
+
+    .clear-btn {
+        padding: 0 10px;
+    }
+
+    .clear-btn i {
+        font-size: 14px;
+    }
+
+    .search-results {
+        max-height: 50vh;
+    }
+
+    .suggestion-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+    .suggestion-img {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .suggestion-name {
+        font-size: 15px;
+    }
+
+    .suggestion-price {
+        font-size: 14px;
+    }
+}
+
+/* Celulares estándar (360px–576px) */
+@media (min-width: 360px) and (max-width: 575.98px) {
+    .search-overlay {
+        position: absolute;
+        top: 80px; /* margin-top: 20px + button height (~25px) + 35px */
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .search-wrapper {
+        width: 95%;
+        max-width: none;
+        padding: 0 10px;
+    }
+
+    .search-box {
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+    }
+
+    #product-search {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    #product-search::placeholder {
+        font-size: 14px;
+    }
+
+    .search-btn {
+        padding: 0 15px;
+    }
+
+    .search-btn i {
+        font-size: 16px;
+    }
+
+    .clear-btn {
+        padding: 0 10px;
+    }
+
+    .clear-btn i {
+        font-size: 14px;
+    }
+
+    .search-results {
+        max-height: 50vh;
+    }
+
+    .suggestion-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+    .suggestion-img {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .suggestion-name {
+        font-size: 15px;
+    }
+
+    .suggestion-price {
+        font-size: 14px;
+    }
+}
+
+/* Celulares grandes/Phablets (576px–768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .search-overlay {
+        position: absolute;
+        top: 90px; /* margin-top: 20px + button height (~35px) + 35px */
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .search-wrapper {
+        width: 80%;
+        max-width: none;
+        padding: 0 10px;
+    }
+
+    .search-box {
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+    }
+
+    .search-btn {
+        padding: 0 15px;
+    }
+
+    .search-btn i {
+        font-size: 16px;
+    }
+
+    .clear-btn {
+        padding: 0 12px;
+    }
+
+    .clear-btn i {
+        font-size: 15px;
+    }
+
+    .search-results {
+        max-height: 300px;
+    }
+}
+
+/* Tablets pequeñas (768px–991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .search-overlay {
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        padding: 0 5%;
+    }
+
+    .search-wrapper {
+        width: 70%;
+        max-width: 450px;
+        padding: 0 15px;
+    }
+
+    .search-box {
+        border-radius: 25px;
+        backdrop-filter: blur(8px);
+    }
+
+    #product-search {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+
+    .search-btn {
+        padding: 0 15px;
+    }
+
+    .search-btn i {
+        font-size: 16px;
+    }
+
+    .clear-btn {
+        padding: 0 12px;
+    }
+
+    .clear-btn i {
+        font-size: 15px;
+    }
+
+    .search-results {
+        max-height: 50vh;
+    }
+
+    .suggestion-item {
+        padding: 12px;
+    }
+
+    .suggestion-img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Tablets grandes (992px–1200px) */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .search-overlay {
+        position: absolute;
+        top: 110px;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        padding: 0 15px;
+    }
+
+    .search-wrapper {
+        width: 60%;
+        max-width: 500px;
+        padding: 0 15px;
+    }
+
+    .search-box {
+        border-radius: 25px;
+        backdrop-filter: blur(8px);
+    }
+
+    #product-search {
+        padding: 14px 18px;
+        font-size: 16px;
+    }
+
+    .search-btn {
+        padding: 0 20px;
+    }
+
+    .search-btn i {
+        font-size: 17px;
+    }
+
+    .clear-btn {
+        padding: 0 15px;
+    }
+
+    .clear-btn i {
+        font-size: 16px;
+    }
+
+    .search-results {
+        max-height: 50vh;
+    }
+}
+
+/* Laptops/Desktops pequeños (1200px–1440px) */
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .search-overlay {
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .search-wrapper {
+        width: 60%;
+        max-width: 550px;
+        padding: 0 20px;
+    }
+
+    .search-box {
+        border-radius: 25px;
+        backdrop-filter: blur(8px);
+    }
+
+    .search-btn {
+        padding: 0 20px;
+    }
+
+    .search-btn i {
+        font-size: 17px;
+    }
+
+    .clear-btn {
+        padding: 0 15px;
+    }
+
+    .clear-btn i {
+        font-size: 16px;
+    }
+}
+
+/* Desktops grandes (1440px–1920px) */
+@media (min-width: 1441px) and (max-width: 1920px) {
+    .search-overlay {
+        position: absolute;
+        top: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .search-wrapper {
+        width: 50%;
+        max-width: 600px;
+        padding: 0 20px;
+    }
+
+    .search-box {
+        border-radius: 25px;
+        backdrop-filter: blur(8px);
+    }
+
+    #product-search {
+        padding: 16px 20px;
+        font-size: 17px;
+    }
+
+    .search-btn {
+        padding: 0 22px;
+    }
+
+    .search-btn i {
+        font-size: 18px;
+    }
+
+    .clear-btn {
+        padding: 0 15px;
+    }
+
+    .clear-btn i {
+        font-size: 16px;
+    }
+}
+
+/* Pantallas ultra anchas (> 1920px) */
+@media (min-width: 1921px) {
+    .search-overlay {
+        position: absolute;
+        top: 140px;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .search-wrapper {
+        width: 50%;
+        max-width: 700px;
+        padding: 0 20px;
+    }
+
+    .search-box {
+        border-radius: 25px;
+        backdrop-filter: blur(8px);
+    }
+
+    #product-search {
+        padding: 18px 25px;
+        font-size: 18px;
+    }
+
+    .search-btn {
+        padding: 0 25px;
+    }
+
+    .search-btn i {
+        font-size: 20px;
+    }
+
+    .clear-btn {
+        padding: 0 15px;
+    }
+
+    .clear-btn i {
+        font-size: 18px;
+    }
+}
+
+/* Orientación portrait (celulares y tablets, max-width: 991px) */
+@media (max-width: 991.98px) and (orientation: portrait) {
+    .search-overlay {
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .search-wrapper {
+        width: 90%;
+        max-width: 95%;
+        padding: 0 10px;
+    }
+
+    .search-box {
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+    }
+
+    #product-search {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .search-btn {
+        padding: 0 15px;
+    }
+
+    .search-btn i {
+        font-size: 16px;
+    }
+
+    .clear-btn {
+        padding: 0 10px;
+    }
+
+    .clear-btn i {
+        font-size: 14px;
+    }
+
+    .search-results {
+        max-height: 50vh;
+    }
+
+    .suggestion-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 15px;
+    }
+
+    .suggestion-img {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Orientación landscape (max-height: 600px) */
+@media (max-height: 600px) {
+    .search-overlay {
+        position: absolute;
+        top: 80px; /* margin-top: 20px + button height (~25px) + 35px */
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .search-wrapper {
+        width: 80%;
+        max-width: none;
+        padding: 0 10px;
+    }
+
+    .search-box {
+        border-radius: 15px;
+        backdrop-filter: blur(5px);
+    }
+
+    #product-search {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .search-btn {
+        padding: 0 15px;
+    }
+
+    .search-btn i {
+        font-size: 16px;
+    }
+
+    .clear-btn {
+        padding: 0 10px;
+    }
+
+    .clear-btn i {
+        font-size: 14px;
+    }
+
+    .search-results {
+        max-height: 200px;
+    }
+}
+
+/* == welcome hero== */
+/* Otros estilos para móviles */
+@media (max-width: 768px) {
+    .welcome-hero-txt h2 {
+        font-size: 1.8rem;
+    }
+
+    .welcome-hero-txt p {
+        font-size: 1.2rem;
+    }
+
+    .welcome-hero-txt h3 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-hero-txt .letter {
+        animation-duration: 20s; /* Proporcional: 3s inicial + 1.5s derecha-izquierda + 5s pausa + 1.5s abajo-arriba + 5s pausa + 1.5s derecha-centro + 5s pausa */
+    }
+
+    /* Ajuste para móviles: misma animación que en desktop */
+    @keyframes fallTextAnimation {
+        /* 0%–15% (0s–3s): Posición inicial (centro) */
+        0%, 15% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        /* 15%–17.5% (3s–3.5s): Desplazar a la derecha */
+        17.5% {
+            transform: translateX(100vw);
+            opacity: 0;
+        }
+        /* 17.6% (3.51s): Saltar a la izquierda (sin transición visible) */
+        17.6% {
+            transform: translateX(-100vw);
+            opacity: 0;
+        }
+        /* 17.6%–25% (3.51s–5s): Mover desde la izquierda al centro */
+        25% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        /* 25%–50% (5s–10s): Pausa 5s en el centro */
+        50% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        /* 50%–52.5% (10s–10.5s): Desplazar abajo */
+        52.5% {
+            transform: translateY(100vh);
+            opacity: 0;
+        }
+        /* 52.5%–55% (10.5s–11s): Caer desde arriba */
+        55% {
+            transform: translateY(-100vh);
+            opacity: 0;
+        }
+        /* 55%–60% (11s–12s): Volver al centro */
+        60% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        /* 60%–85% (12s–17s): Pausa 5s en el centro */
+        85% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        /* 85%–87.5% (17s–17.5s): Desplazar a la derecha */
+        87.5% {
+            transform: translateX(100vw);
+            opacity: 0;
+        }
+        /* 87.5%–95% (17.5s–19s): Aparecer en el centro */
+        95% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        /* 95%–100% (19s–20s): Pausa 5s en el centro */
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+
+
+/* ----------------------------------------------sobre nosotros----------------------------------------------- */
+/* ===== MEDIA QUERIES PARA PANTALLAS PEQUEÑAS ===== */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 3rem 1.5rem;
+    }
+    
+    .about-header {
+        margin-bottom: 3rem;
+    }
+    
+    .about-header h2 {
+        font-size: 2rem;
+    }
+    
+    .about-header h2::after {
+        width: 80px;
+    }
+    
+    /* TIMELINE REORGANIZADA */
+    .about-timeline {
+        padding: 1rem 0;
+        margin: 2rem 0;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 3rem;
+        padding-left: 40px;
+    }
+    
+    .timeline-year {
+        width: 80px;
+        height: 80px;
+        font-size: 1.2rem;
+        order: 1;
+        margin-bottom: 1.5rem;
+    }
+    
+    .timeline-content {
+        width: 100%;
+        margin-left: 0;
+        order: 2;
+        padding: 1.2rem;
+        margin-top: 0;
+    }
+    
+    /* LÍNEAS CONECTORAS MEJORADAS */
+    .timeline-item:not(:last-child)::before {
+        left: 40px;
+        top: 50px; /* Ajuste para que empiece después del círculo del año */
+        height: calc(100% + 3rem);
+        background: linear-gradient(to bottom, #3498db, #9b59b6);
+        z-index: 0;
+    }
+    
+    /* BADGE REUBICADO */
+    .timeline-badge {
+        left: 0;
+        top: 40px;
+        transform: translateX(-50%);
+    }
+    
+    /* MARCADORES DE HITOS REUBICADOS */
+    .milestone-marker {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        margin: 0.5rem 0;
+        transform: none !important;
+        display: inline-block;
+    }
+    
+    .milestone-marker .marker-pointer {
+        display: none;
+    }
+    
+    /* VALORES REORGANIZADOS */
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .value-card {
+        padding: 1.5rem;
+    }
+    
+    /* EQUIPO EN COLUMNA */
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-member {
+        padding: 1.5rem;
+    }
+    
+    .member-photo {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 2rem 1rem;
+    }
+    
+    .about-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .timeline-item {
+        padding-left: 30px;
+    }
+    
+    .timeline-year {
+        width: 70px;
+        height: 70px;
+        font-size: 1.1rem;
+    }
+    
+    .timeline-item:not(:last-child)::before {
+        left: 35px;
+        top: 70px;
+    }
+    
+    .timeline-badge {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+        top: 35px;
+    }
+    
+    /* AJUSTES PARA TEXTO PEQUEÑO */
+    .timeline-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+    
+    .about-values h3, 
+    .about-team h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/*----------------------------------------------------------------- contacto ---------------------------------------------------------------- */
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .info-card {
+    padding: 1.2rem;
+  }
+  
+  .section#contacto {
+    background-image: url('https://cdn.pixabay.com/photo/2014/05/16/13/02/concept-345541_1280.jpg');
+    background-attachment: scroll;
+    background-position: center center;
+    padding: 2rem 0;
+  }
+  
+  /* Ajustar overlay para móviles si es necesario */
+  .section#contacto::before {
+    background: rgba(10, 37, 82, 0.15); /* Puedes ajustar esta opacidad */
+  }
+  
+  .social-links a::after {
+    font-size: 0.6rem;
+    bottom: -28px;
+  }
+  
+  .social-links a:hover::after {
+    bottom: -32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 1.5rem;
+  }
+  
+  .form-footer {
+    flex-direction: column;
+  }
+  
+  .submit-btn {
+    padding: 0.8rem;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  /* Opcional: Ajustes adicionales específicos para móviles pequeños */
+  .section#contacto {
+    background-position: 60% center; /* Ajusta según la composición de tu imagen */
+  }
+}
+
+
+
+/*----------------------------------------------------------------------------- unete ----------------------------------------------------------------------------- */
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 992px) {
+    .unirte-content {
+        flex-direction: column;
+    }
+    
+    .unirte-header h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Cambio de videos para móviles */
+    .video-background .desktop-video {
+        display: none;
+    }
+    
+    .video-background .mobile-video {
+        display: block;
+    }
+    
+    .benefit-card {
+        flex-direction: column;
+    }
+    
+    .benefit-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .unirte-header .subtitle {
+        color: #f8f9fa;
+    }
+}
+
+@media (max-width: 480px) {
+    #unirte {
+        padding: 2rem 0; /* Más reducido en móviles */
+    }
+    
+    .unirte-header h2 {
+        font-size: 2rem;
+    }
+    
+    .unirte-header .subtitle {
+        font-size: 1rem;
+    }
+    
+    .unirte-form {
+        padding: 1.5rem;
+    }
+    
+    .benefit-card,
+    .unirte-form {
+        backdrop-filter: blur(5px);
+    }
+}
+
+
+/* ------------------------------------------------------tienda------------------------------------------------------------------- */
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .tienda-btn {
+        padding: 1rem 2.5rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #tienda.section {
+        height: 80vh;
+    }
+
+    /* Cambio de video en móviles */
+    .compuvideo {
+        display: none;
+    }
+    
+    .videomobil {
+        display: block;
+    }
+
+    .tienda-btn {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #tienda.section {
+        height: 70vh;
+    }
+
+    .tienda-btn {
+        padding: 0.8rem 1.8rem;
+        width: auto;
+        max-width: 280px;
+    }
+}
