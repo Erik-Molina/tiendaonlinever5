@@ -232,539 +232,207 @@
     }
 }
 
-/* === Barra de búsqueda === */
-/* Celulares pequeños (< 360px) */
-@media (max-width: 359.98px) {
-    .search-overlay {
-        position: absolute;
-        top: 70px; /* margin-top: 15px + button height (~20px) + 35px */
-        left: 50%;
-        transform: translateX(-50%);
-        justify-content: center;
-        padding: 0 10px;
-    }
 
-    .search-wrapper {
-        width: 90%;
-        max-width: none;
-        padding: 0 5px;
-    }
 
-    .search-box {
-        border-radius: 20px;
-        backdrop-filter: blur(5px);
-    }
 
-    #product-search {
-        padding: 10px 12px;
-        font-size: 14px;
-    }
 
-    #product-search::placeholder {
-        font-size: 14px;
-    }
 
-    .search-btn {
-        padding: 0 15px;
-    }
 
-    .search-btn i {
-        font-size: 16px;
-    }
 
-    .clear-btn {
-        padding: 0 10px;
-    }
 
-    .clear-btn i {
-        font-size: 14px;
-    }
 
-    .search-results {
-        max-height: 50vh;
+/* ==================== MÓVILES (Vertical) ==================== */
+@media (max-width: 767px) {
+  .search-overlay {
+    top: 10px;
+    padding: 0 15px;
+  }
+
+  .search-wrapper {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .search-box {
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+  }
+
+  #product-search {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  #product-search::placeholder {
+    font-size: 13px;
+  }
+
+  .search-btn {
+    padding: 0 15px;
+    font-size: 14px;
+  }
+
+  .search-btn i {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+
+  .clear-btn {
+    right: 4.5rem;
+    padding: 0 10px;
+  }
+
+  /* Resultados - 2 columnas */
+  #search-results {
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .suggestion-item {
+    flex: 0 0 calc(50% - 10px); /* 2 items por fila */
+    padding: 10px;
+  }
+
+  .suggestion-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .suggestion-name {
+    font-size: 13px;
+  }
+
+  .suggestion-price {
+    font-size: 14px;
+  }
+}
+
+/* ==================== TABLETS (Horizontal y Vertical) ==================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .search-overlay {
+    top: 15px;
+  }
+
+  .search-wrapper {
+    max-width: 650px;
+  }
+
+  /* Resultados - 3 columnas */
+  .suggestion-item {
+    flex: 0 0 calc(33.33% - 15px); /* 3 items por fila */
+  }
+
+  .search-btn {
+    padding: 0 20px;
+  }
+
+  .clear-btn {
+    right: 5.5rem;
+  }
+}
+
+
+
+/* --- Media Queries for Responsive Search Results --- */
+
+/* Desktop: 4 columns (default, already set in your CSS with calc(25% - 15px)) */
+@media screen and (min-width: 1024px) {
+    /* No changes needed as your .suggestion-item already uses flex: 0 0 calc(25% - 15px) for 4 columns */
+}
+
+/* Tablet: 3 columns for search results */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    #search-results {
+        gap: 12px; /* Adjusted spacing */
+        padding: 12px;
     }
 
     .suggestion-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 10px 15px;
-    }
-
-    .suggestion-img {
-        margin-right: 0;
-        margin-bottom: 10px;
-        width: 70px;
-        height: 70px;
-    }
-
-    .suggestion-name {
-        font-size: 15px;
-    }
-
-    .suggestion-price {
-        font-size: 14px;
-    }
-}
-
-/* Celulares estándar (360px–576px) */
-@media (min-width: 360px) and (max-width: 575.98px) {
-    .search-overlay {
-        position: absolute;
-        top: 80px; /* margin-top: 20px + button height (~25px) + 35px */
-        left: 50%;
-        transform: translateX(-50%);
-        justify-content: center;
-        padding: 0 10px;
-    }
-
-    .search-wrapper {
-        width: 95%;
-        max-width: none;
-        padding: 0 10px;
-    }
-
-    .search-box {
-        border-radius: 20px;
-        backdrop-filter: blur(5px);
-    }
-
-    #product-search {
-        padding: 10px 12px;
-        font-size: 14px;
-    }
-
-    #product-search::placeholder {
-        font-size: 14px;
-    }
-
-    .search-btn {
-        padding: 0 15px;
-    }
-
-    .search-btn i {
-        font-size: 16px;
-    }
-
-    .clear-btn {
-        padding: 0 10px;
-    }
-
-    .clear-btn i {
-        font-size: 14px;
-    }
-
-    .search-results {
-        max-height: 50vh;
-    }
-
-    .suggestion-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 10px 15px;
-    }
-
-    .suggestion-img {
-        margin-right: 0;
-        margin-bottom: 10px;
-        width: 70px;
-        height: 70px;
-    }
-
-    .suggestion-name {
-        font-size: 15px;
-    }
-
-    .suggestion-price {
-        font-size: 14px;
-    }
-}
-
-/* Celulares grandes/Phablets (576px–768px) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .search-overlay {
-        position: absolute;
-        top: 90px; /* margin-top: 20px + button height (~35px) + 35px */
-        left: 50%;
-        transform: translateX(-50%);
-        justify-content: center;
-        padding: 0 20px;
-    }
-
-    .search-wrapper {
-        width: 80%;
-        max-width: none;
-        padding: 0 10px;
-    }
-
-    .search-box {
-        border-radius: 20px;
-        backdrop-filter: blur(5px);
-    }
-
-    .search-btn {
-        padding: 0 15px;
-    }
-
-    .search-btn i {
-        font-size: 16px;
-    }
-
-    .clear-btn {
-        padding: 0 12px;
-    }
-
-    .clear-btn i {
-        font-size: 15px;
-    }
-
-    .search-results {
-        max-height: 300px;
-    }
-}
-
-/* Tablets pequeñas (768px–991px) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .search-overlay {
-        position: absolute;
-        top: 100px;
-        left: 50%;
-        transform: translateX(-50%);
-        justify-content: center;
-        padding: 0 5%;
-    }
-
-    .search-wrapper {
-        width: 70%;
-        max-width: 450px;
-        padding: 0 15px;
-    }
-
-    .search-box {
-        border-radius: 25px;
-        backdrop-filter: blur(8px);
-    }
-
-    #product-search {
-        padding: 12px 15px;
-        font-size: 15px;
-    }
-
-    .search-btn {
-        padding: 0 15px;
-    }
-
-    .search-btn i {
-        font-size: 16px;
-    }
-
-    .clear-btn {
-        padding: 0 12px;
-    }
-
-    .clear-btn i {
-        font-size: 15px;
-    }
-
-    .search-results {
-        max-height: 50vh;
-    }
-
-    .suggestion-item {
+        flex: 0 0 calc(33.33% - 12px); /* 3 columns */
         padding: 12px;
     }
 
     .suggestion-img {
-        width: 50px;
-        height: 50px;
-    }
-}
-
-/* Tablets grandes (992px–1200px) */
-@media (min-width: 992px) and (max-width: 1200px) {
-    .search-overlay {
-        position: absolute;
-        top: 110px;
-        left: 50%;
-        transform: translateX(-50%);
-        justify-content: center;
-        padding: 0 15px;
+        width: 80px;
+        height: 80px;
     }
 
-    .search-wrapper {
-        width: 60%;
-        max-width: 500px;
-        padding: 0 15px;
+    .suggestion-name {
+        font-size: 13px;
     }
 
-    .search-box {
-        border-radius: 25px;
-        backdrop-filter: blur(8px);
-    }
-
-    #product-search {
-        padding: 14px 18px;
-        font-size: 16px;
-    }
-
-    .search-btn {
-        padding: 0 20px;
-    }
-
-    .search-btn i {
-        font-size: 17px;
-    }
-
-    .clear-btn {
-        padding: 0 15px;
-    }
-
-    .clear-btn i {
-        font-size: 16px;
-    }
-
-    .search-results {
-        max-height: 50vh;
-    }
-}
-
-/* Laptops/Desktops pequeños (1200px–1440px) */
-@media (min-width: 1201px) and (max-width: 1440px) {
-    .search-overlay {
-        position: absolute;
-        top: 120px;
-        left: 50%;
-        transform: translateX(-50%);
-        justify-content: center;
-        padding: 0 20px;
-    }
-
-    .search-wrapper {
-        width: 60%;
-        max-width: 550px;
-        padding: 0 20px;
-    }
-
-    .search-box {
-        border-radius: 25px;
-        backdrop-filter: blur(8px);
-    }
-
-    .search-btn {
-        padding: 0 20px;
-    }
-
-    .search-btn i {
-        font-size: 17px;
-    }
-
-    .clear-btn {
-        padding: 0 15px;
-    }
-
-    .clear-btn i {
-        font-size: 16px;
-    }
-}
-
-/* Desktops grandes (1440px–1920px) */
-@media (min-width: 1441px) and (max-width: 1920px) {
-    .search-overlay {
-        position: absolute;
-        top: 130px;
-        left: 50%;
-        transform: translateX(-50%);
-        justify-content: center;
-        padding: 0 20px;
-    }
-
-    .search-wrapper {
-        width: 50%;
-        max-width: 600px;
-        padding: 0 20px;
-    }
-
-    .search-box {
-        border-radius: 25px;
-        backdrop-filter: blur(8px);
-    }
-
-    #product-search {
-        padding: 16px 20px;
-        font-size: 17px;
-    }
-
-    .search-btn {
-        padding: 0 22px;
-    }
-
-    .search-btn i {
-        font-size: 18px;
-    }
-
-    .clear-btn {
-        padding: 0 15px;
-    }
-
-    .clear-btn i {
-        font-size: 16px;
-    }
-}
-
-/* Pantallas ultra anchas (> 1920px) */
-@media (min-width: 1921px) {
-    .search-overlay {
-        position: absolute;
-        top: 140px;
-        left: 50%;
-        transform: translateX(-50%);
-        justify-content: center;
-        padding: 0 20px;
-    }
-
-    .search-wrapper {
-        width: 50%;
-        max-width: 700px;
-        padding: 0 20px;
-    }
-
-    .search-box {
-        border-radius: 25px;
-        backdrop-filter: blur(8px);
-    }
-
-    #product-search {
-        padding: 18px 25px;
-        font-size: 18px;
-    }
-
-    .search-btn {
-        padding: 0 25px;
-    }
-
-    .search-btn i {
-        font-size: 20px;
-    }
-
-    .clear-btn {
-        padding: 0 15px;
-    }
-
-    .clear-btn i {
-        font-size: 18px;
-    }
-}
-
-/* Orientación portrait (celulares y tablets, max-width: 991px) */
-@media (max-width: 991.98px) and (orientation: portrait) {
-    .search-overlay {
-        position: absolute;
-        top: 90px;
-        left: 50%;
-        transform: translateX(-50%);
-        justify-content: center;
-        padding: 0 10px;
-    }
-
-    .search-wrapper {
-        width: 90%;
-        max-width: 95%;
-        padding: 0 10px;
-    }
-
-    .search-box {
-        border-radius: 20px;
-        backdrop-filter: blur(5px);
-    }
-
-    #product-search {
-        padding: 10px 12px;
+    .suggestion-price {
         font-size: 14px;
     }
+}
 
-    .search-btn {
-        padding: 0 15px;
-    }
-
-    .search-btn i {
-        font-size: 16px;
-    }
-
-    .clear-btn {
-        padding: 0 10px;
-    }
-
-    .clear-btn i {
-        font-size: 14px;
-    }
-
-    .search-results {
-        max-height: 50vh;
+/* Mobile: 2 columns for search results */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    #search-results {
+        gap: 10px;
+        padding: 10px;
     }
 
     .suggestion-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 10px 15px;
+        flex: 0 0 calc(50% - 10px); /* 2 columns */
+        padding: 10px;
     }
 
     .suggestion-img {
-        margin-right: 0;
-        margin-bottom: 10px;
         width: 70px;
         height: 70px;
     }
-}
 
-/* Orientación landscape (max-height: 600px) */
-@media (max-height: 600px) {
-    .search-overlay {
-        position: absolute;
-        top: 80px; /* margin-top: 20px + button height (~25px) + 35px */
-        left: 50%;
-        transform: translateX(-50%);
-        justify-content: center;
-        padding: 0 10px;
+    .suggestion-name {
+        font-size: 12px;
     }
 
-    .search-wrapper {
-        width: 80%;
-        max-width: none;
-        padding: 0 10px;
-    }
-
-    .search-box {
-        border-radius: 15px;
-        backdrop-filter: blur(5px);
-    }
-
-    #product-search {
-        padding: 8px 10px;
-        font-size: 14px;
-    }
-
-    .search-btn {
-        padding: 0 15px;
-    }
-
-    .search-btn i {
-        font-size: 16px;
-    }
-
-    .clear-btn {
-        padding: 0 10px;
-    }
-
-    .clear-btn i {
-        font-size: 14px;
-    }
-
-    .search-results {
-        max-height: 200px;
+    .suggestion-price {
+        font-size: 13px;
     }
 }
+
+/* Small Mobile: 2 columns with tighter spacing */
+@media screen and (max-width: 479px) {
+
+    .suggestion-item {
+        flex: 0 0 calc(50% - 8px); /* 2 columns */
+        padding: 8px;
+    }
+
+    .suggestion-img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 6px;
+    }
+
+    .suggestion-name {
+        font-size: 11px;
+    }
+
+    .suggestion-price {
+        font-size: 12px;
+        padding: 3px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* == welcome hero== */
 /* Otros estilos para móviles */
